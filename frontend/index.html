@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Inline Resume Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="template-modern">
+
+<div class="toolbar">
+    <label>Template:
+        <select id="templateSelect">
+            <option value="template-modern">Modern</option>
+            <option value="template-classic">Classic</option>
+            <option value="template-minimal">Minimal</option>
+        </select>
+    </label>
+    <button onclick="addSection()">Add Section</button>
+    <button onclick="togglePreview()">Preview</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+    <button onclick="submitResume()" class="submit-btn">Submit Resume</button>
+</div>
+
+<div class="resume-container" id="resume">
+    <section contenteditable="true" data-title="Header">
+        <div class="section-controls">
+            <button onclick="moveUp(this)">↑</button>
+            <button onclick="moveDown(this)">↓</button>
+            <button onclick="deleteSection(this)">🗑</button>
+        </div>
+        <h1 style="margin:0;">John Doe</h1>
+        <p>Software Engineer | john.doe@email.com | +1234567890 | City, Country</p>
+    </section>
+
+    <section contenteditable="true" data-title="Summary">
+        <div class="section-controls">
+            <button onclick="moveUp(this)">↑</button>
+            <button onclick="moveDown(this)">↓</button>
+            <button onclick="deleteSection(this)">🗑</button>
+        </div>
+        <h2>Professional Summary</h2>
+        <p>Experienced software engineer with 5+ years in developing scalable applications, specializing in full-stack solutions with a passion for clean code and modern UI/UX.</p>
+    </section>
+
+    <section contenteditable="true" data-title="Experience">
+        <div class="section-controls">
+            <button onclick="moveUp(this)">↑</button>
+            <button onclick="moveDown(this)">↓</button>
+            <button onclick="deleteSection(this)">🗑</button>
+        </div>
+        <h2>Experience</h2>
+        <p><strong>Senior Developer</strong>, TechCorp (2019–Present)<br>Lead developer for multiple high-profile projects, optimizing performance and enhancing UI design.</p>
+        <p><strong>Software Engineer</strong>, CodeWorks (2016–2019)<br>Developed REST APIs and front-end interfaces, improving app load time by 40%.</p>
+    </section>
+
+    <section contenteditable="true" data-title="Education">
+        <div class="section-controls">
+            <button onclick="moveUp(this)">↑</button>
+            <button onclick="moveDown(this)">↓</button>
+            <button onclick="deleteSection(this)">🗑</button>
+        </div>
+        <h2>Education</h2>
+        <p>BSc in Computer Science — University A (2012–2016)</p>
+        <p>MSc in Software Engineering — University B (2016–2018)</p>
+    </section>
+
+    <section contenteditable="true" data-title="Skills">
+        <div class="section-controls">
+            <button onclick="moveUp(this)">↑</button>
+            <button onclick="moveDown(this)">↓</button>
+            <button onclick="deleteSection(this)">🗑</button>
+        </div>
+        <h2>Skills</h2>
+        <div class="skills-columns">
+            <div>JavaScript</div>
+            <div>Python</div>
+            <div>React</div>
+            <div>Node.js</div>
+            <div>SQL</div>
+            <div>Git</div>
+        </div>
+    </section>
+
+    <section contenteditable="true" data-title="Projects">
+        <div class="section-controls">
+            <button onclick="moveUp(this)">↑</button>
+            <button onclick="moveDown(this)">↓</button>
+            <button onclick="deleteSection(this)">🗑</button>
+        </div>
+        <h2>Projects</h2>
+        <p><strong>Portfolio Website</strong> — Designed and developed a responsive portfolio using HTML, CSS, and JavaScript.</p>
+    </section>
+</div>
+
+<div id="message" class="message"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

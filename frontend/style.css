@@ -1,0 +1,151 @@
+/* ====== Base Styles ====== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+.toolbar {
+    background: #222;
+    color: white;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toolbar button, .toolbar select {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toolbar button:hover, .toolbar select:hover {
+    opacity: 0.9;
+}
+
+.submit-btn {
+    background: #28a745 !important;
+    color: white;
+    margin-left: auto;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+section.hidden { 
+    display: none; 
+}
+
+section h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 4px;
+}
+
+.section-controls {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 4px;
+}
+
+.section-controls button {
+    background: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+[contenteditable="true"]:focus {
+    outline: 2px dashed #007BFF;
+    background: #f9f9f9;
+}
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
+
+/* ====== Templates ====== */
+.template-modern h2 { 
+    color: #007BFF; 
+}
+
+.template-modern { 
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+.template-classic { 
+    font-family: 'Georgia', serif; 
+}
+
+.template-classic h2 { 
+    border-color: #000; 
+}
+
+.template-minimal { 
+    font-family: Arial, sans-serif; 
+}
+
+.template-minimal h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* ====== Message Styles ====== */
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    display: none;
+}
+
+.message.success {
+    background: #28a745;
+    display: block;
+}
+
+.message.error {
+    background: #dc3545;
+    display: block;
+}
+
+/* ====== Print Styles ====== */
+@media print {
+    .toolbar, .section-controls, .preview-exit, .message { 
+        display: none !important; 
+    }
+    body { 
+        background: white; 
+    }
+    .resume-container { 
+        box-shadow: none; 
+        margin: 0; 
+    }
+}
